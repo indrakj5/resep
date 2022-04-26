@@ -20,6 +20,8 @@ class CreateResepTable extends Migration
             $table->string('thumbnail', 45);
             $table->unsignedBigInteger('kategori_id');
             $table->foreign('kategori_id')->references('id')->on('kategori');
+            $table->unsignedBigInteger('metode_id');
+            $table->foreign('metode_id')->references('id')->on('metode');
             $table->timestamps();
         });
     }
